@@ -1,0 +1,21 @@
+{
+    "Rice":
+            {"name": "basmati", 
+             "weight": "20Kg",
+             "price" : "60"
+            }, 
+    "Wheat":        
+            {
+             "name": "spelt", 
+             "weight": "25kg",
+             "price" : "50"
+            },
+    "Pulses":
+            {
+             "name": "beans", 
+             "weight": "10kg",
+             "price" : "80"
+
+            }
+    
+}
