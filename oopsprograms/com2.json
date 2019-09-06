@@ -1,0 +1,22 @@
+[
+    {
+        "name":"Reliance",
+        "share_count":"5",
+        "share_price":"12000"
+    },
+    {
+       "name":"ITC",
+       "share_count":"8",
+       "share_price":"15000"
+    },
+    {
+       "name":"TATA",
+       "share_count":"3",
+       "share_price":"8000"
+    },
+    {
+       "name":"Hyundai",
+       "share_count":"4",
+       "share_price":"16000"
+    }
+]

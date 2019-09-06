@@ -1,21 +1,18 @@
 {
-    "Rice":
-            {"name": "basmati", 
-             "weight": "20Kg",
-             "price" : "60"
-            }, 
-    "Wheat":        
-            {
-             "name": "spelt", 
-             "weight": "25kg",
-             "price" : "50"
-            },
-    "Pulses":
-            {
-             "name": "beans", 
-             "weight": "10kg",
-             "price" : "80"
+    "rice" : {
+        "name":"basmati",
+        "weight":2,
+        "price":70
+    },
+    "pulses":{
+        "name":"beans",
+        "weight":15,
+        "price":60
+    },
+    "wheats":{
+        "name":"spelt",
+        "weight":22,
+        "price":80
+    }
 
-            }
-    
 }

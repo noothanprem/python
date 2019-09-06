@@ -19,7 +19,7 @@ f2=open("abc.txt","r")
 with open('abc.txt') as f:
     content = f.read().split(',')
 f2.close()
-#prints the contents of the file
+#prints the contents of the       file
 print(content)
 
 i=0

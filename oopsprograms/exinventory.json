@@ -1,0 +1,58 @@
+{
+    "rice":
+        [
+        {
+            "name":"basmati",
+            "weight":2,
+            "price":70
+        },
+        {
+            "name":"aizon",
+            "weight":5,
+            "price":80
+        },
+        {
+            "name":"annapoorna",
+            "weight":4,
+            "price":80
+        }
+    ],
+    "pulses":
+    [
+        {
+            "name":"chickpea",
+            "weight":15,
+            "price":60
+        },
+        {
+            "name":"pigeon pea",
+            "weight":8,
+            "price":75
+        },
+        {
+            "name":"beans",
+            "weight":10,
+            "price":68
+        }
+    ],
+    "wheats":
+    [
+        {
+            "name":"Emmer wheat",
+            "weight":22,
+            "price":80
+        },
+        {
+            "name":"Macaroni wheat",
+            "weight":18,
+            "price":76   
+        },
+        {
+            "name":"Common bread wheat",
+            "weight":24,
+            "price":92   
+        }
+
+    ]
+
+}
