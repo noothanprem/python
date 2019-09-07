@@ -1,15 +1,16 @@
-import json
-with open("inventory.json","r") as f:
-    data=json.load(f)
+"""
+
+    Name : InventoryManagement.py
+    Date : 31/08/2019
+    Purpose : To Create a JSON file having Inventory Details for Rice, Pulses and Wheats
+              with properties name, weight, price per kg, read in JSON File and output thejson string
+
+"""
+
+
+from oopsprograms.inventorymanagement_utility import Inventory
 
 
 
-for i in data:
-    print(i)
-    print(i, data[i]["name"], data[i]["weight"]* data[i]["price"])# ,int(data[0]['name']["weight"])*int(data[0]['name']["price"]))
-
-
-# print("Price of Basmati Rice : ",int(data["rice"]["weight"])*int(data["rice"]["price"]))
-# print("Price of Beans : ",int(data["pulses"]["weight"])*int(data["pulses"]["price"]))
-# print("Price of Spelt : ",int(data["wheats"]["weight"])*int(data["wheats"]["price"]))
-
+#calling the function to find the value and display it
+Inventory.find()

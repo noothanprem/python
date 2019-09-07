@@ -7,10 +7,17 @@ Purpose : Simulates a gambler who start with $stake and place fair $1 bets until
 """
 
 from Utility import utility
-#recieving the stake and goal as inputs from the user
-stake=int(input("Enter your stake : "))
-goal=int(input("Enter your goal : "))
 
-#Calling the function in the BL file
-utility.gambler(stake,goal)
+while True:
+    try:
+        # recieving the stake and goal as inputs from the user
+        stake=int(input("Enter your stake : "))
+        goal=int(input("Enter your goal : "))
+        # Calling the function in the BL file
+        utility.gambler(stake, goal)
+        break
+    except ValueError:
+        print("Please Enter numbers only")
+
+
 

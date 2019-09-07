@@ -9,5 +9,5 @@ Purpose : Write a Stopwatch Program for measuring the time that elapses between 
 
 from Utility import utility
 
-#calling the sop() function in the utility.py
+#calling the stop() function in the utility.py
 utility.stop()

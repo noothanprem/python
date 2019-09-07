@@ -11,9 +11,6 @@ def dis(x,y):
 
 
 
-
-
-
 def gambler(stake, goal):
     ##Initializing the variables with 0
     count = 0
@@ -101,19 +98,11 @@ def leap(y):
     #initializing the 'count' variable with 0
     count=0
 
-    #getting the number of digits present in the year
-    for i in str(year):
-        count+=1
-
-    #checking whether it is a leap year if it contains 4 digits, else it prompts the user to enter enough number of digits
-    if(count == 4):
-        if(year % 4 == 0 and year % 100 != 0 and year % 400 != 0):
-            print(year," is a Leap Year")
-        else:
-            print(year, " is not a Leap Year")
+    # checking whether it is a leap year
+    if(year % 4 == 0 and year % 100 != 0 and year % 400 != 0):
+        print(year," is a Leap Year")
     else:
-        print("Enter a 4 digit year ")
-
+        print(year, " is not a Leap Year")
 
 
 
@@ -134,15 +123,18 @@ def pow1(n):
 
 
 def stop():
-    a=input("Do you want to start ? ... give true or false")
-    if(a):
-        start=time.time()
-        print(start)
-    b=input("Do you want to stop?... give trueor false")
-    if(b):
-        end=time.time()
-        print(end)
-    print("The difference : ",end-start)
+    try:
+        a=input("Do you want to start ? ... give true or false")
+        if(a == True):
+            start=time.time()
+            print(start)
+            b=input("Do you want to stop?... give True or False")
+            if(b == True):
+                end=time.time()
+                print(end)
+            print("The difference : ",end-start)
+    except ValueError:
+        print("Enter a boolean value")
 
 
 
