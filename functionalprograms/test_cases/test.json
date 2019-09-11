@@ -1,0 +1,12 @@
+{
+  "distance": [
+                {
+                  "string_input":
+                  {
+                    "str1": "abc",
+                    "str2": "xyz"
+                  }
+                }
+
+              ]
+}

@@ -9,17 +9,34 @@ Purpose : Read in a list of words from File. Then prompt the user to enter a wor
 
 
 from Utility import utility
+import sys
 
-#Writing the contents to the file
-f1=open("abc.txt","w+")
+while True:
+    try:
+         #Writing the contents to the file
+        f1=open("abc.txt","w")
+        break
+    except FileNotFoundError:
+        print("The file Does not exists")
+        sys.exit()
+
 f1.write("jettus thanzeeh janis sreeraj abhi noothan")
 f1.close()
 
-#Reading the contents from the file
-f2=open("abc.txt","r")
-with open('abc.txt') as f:
-    content = f.read().split(' ')
-f2.close()
+while True:
+    try:
+        #Reading the contents from the file
+        with open('abc.txt') as f:
+            content = f.read().split(' ')
+            break
+    except FileNotFoundError:
+        print("The file Does not exists")
+        sys.exit()
+
+
+
+
+
 
 #Printing the file contents
 print("Before Sorting : " ,content)
@@ -28,8 +45,14 @@ print("Before Sorting : " ,content)
 content.sort()
 print("After Sorting : ",content)
 
-#getting the wrd to be searched from the user
-s1=input("Enter the word to be searched : ")
+while True:
+    #getting the wrd to be searched from the user
+    s1=input("Enter the word to be searched : ")
+    if(s1.isdigit() == True):
+        print("Enter words only.. not digits")
+    else:
+        break
+
 
 #calling the function in the BL file
 utility.binary(content,s1)

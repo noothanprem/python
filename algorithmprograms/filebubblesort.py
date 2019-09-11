@@ -11,17 +11,28 @@ Purpose  : Reads in integers from a file ,prints them in sorted order using Bubb
 
 
 from Utility import utility
+import sys
 
-#Writing contents to into the file
-f1=open("xyz.txt","w+")
+while True:
+    try:
+        #Writing contents to into the file
+        f1=open("xyz.txt","w")
+        break
+    except FileNotFoundError as e:
+        print(e)
+        sys.exit()
+
 f1.write("jettus thanzeeh janis sreeraj abhi noothan")
 f1.close()
 
 #Reading the contents from the file
-f2=open("abc.txt","r")
-with open('xyz.txt') as f:
-    content = f.read().split(' ')
-f2.close()
+try:
+    with open('xy.txt') as f:
+        content = f.read().split(' ')
+except FileNotFoundError as e:
+    print(e)
+    sys.exit()
+
 
 #Printing the contents
 print("Before Sorting : " ,content)

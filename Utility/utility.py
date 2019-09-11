@@ -1,6 +1,7 @@
 import math
 import random
 import time
+import re
 
 def dis(x,y):
     #Applying the equation
@@ -123,18 +124,27 @@ def pow1(n):
 
 
 def stop():
-    try:
-        a=input("Do you want to start ? ... give true or false")
-        if(a == True):
-            start=time.time()
-            print(start)
-            b=input("Do you want to stop?... give True or False")
-            if(b == True):
+    while True:
+        try:
+            a=int(input("Do you want to start ? ... give true(1) or false(0)"))
+            if(a == 1):
+                start=time.time()
+                print(start)
+            else:
+                print("Enter 0 or 1 ")
+                continue
+            b=int(input("Do you want to stop?... give True or False"))
+            end=0.0
+            if(b == 1):
                 end=time.time()
                 print(end)
+            else:
+                print("Enter 0, or 1 ")
+                continue
             print("The difference : ",end-start)
-    except ValueError:
-        print("Enter a boolean value")
+            break
+        except ValueError:
+            print("Enter a boolean value")
 
 
 
@@ -156,6 +166,8 @@ def sum(n,list1):
     #assigning the passed list 'list1' to 'list2' and n to num
     list2=list1
     num=n
+    print(n)
+    print(list2)
 
     #initializing the 'count' with 0
     count=0
@@ -168,9 +180,9 @@ def sum(n,list1):
             #from 2nd element to n-1 th element
             for k in range(2,num):
                 #checking whether the sum of 3 digits is zero or not
-                if(list1[i]+list1[j]+list1[k] == 0):
-                    #if the sum is '0', pprinting thode 3 digits
-                    print(list1[i]," , ",list1[j],",",list1[k])
+                if(list2[i]+list2[j]+list2[k] == 0):
+                    #if the sum is '0', printing those 3 digits
+                    print(list2[i]," , ",list2[j],",",list2[k])
                     #Incrementing the count variable
                     count+=1
 
@@ -188,27 +200,28 @@ def checkanagram(str1,str2):
     #finding the length of both s1 and s2
     len1=len(s1)
     len2=len(s2)
-
-    #i from index 0 to len1-1
-    for i in range(0,len1):
-        #j from index 0 to len2-1
-        for j in range(0,len2):
-            #checking whether each character of s1 is present in s2 or not
-            if(s1[i] == s2[j]):
-                #checking whether we have reached the last character of s1 or not
-                if(i == (len1-1)):
-                    print("These are Anagrams")
-                    return
+    #Checks whether both the words has same number of characters or not
+    if(len1 == len2):
+        #i from index 0 to len1-1
+        for i in range(0,len1):
+            #j from index 0 to len2-1
+            for j in range(0,len2):
+                #checking whether each character of s1 is present in s2 or not
+                if(s1[i] == s2[j]):
+                    #checking whether we have reached the last character of s1 or not
+                    if(i == (len1-1)):
+                        print("These are Anagrams")
+                        return
+                    else:
+                        #if it's not the last charcter, break the inner loop to continue with the next element of s1
+                        break
                 else:
-                    #if it's not the last charcter, break the inner loop to continue with the next element of s1
-                    break
-            else:
-                if(j == (len2-1)):
-                    #checking whether we have reached the last character of s2 or not
-                    #If we have reached, that means that character is not present in s2
-                    #So, print the message saying that these are not Anagrams and return
-                    print("These are not anagrams")
-                    return
+                    if(j == (len2-1)):
+                        #checking whether we have reached the last character of s2 or not
+                        #If we have reached, that means that character is not present in s2
+                        #So, print the message saying that these are not Anagrams and return
+                        print("These are not anagrams")
+                        return
     print("These are not Anagrams")
 
 
@@ -251,13 +264,14 @@ def binary(list1, s):
         # If they are same, we have foud the element
         if (s1 == content[middle]):
             print("Word found at ", middle)
-            break
+            return
         # if s1 is greater than the middle element, then update the 'first' with 'middle+1' to see in the second half
         elif (s1 > content[middle]):
             first = middle + 1
         # if s1 is lesser than the middle element, then update the 'last' with 'middle-1' to see in the first half
         elif (s1 < content[middle]):
             last = middle - 1
+    print("The word not found")
 
 
 
@@ -281,6 +295,24 @@ def bubsort(list1):
     return content
 
 
+def fileinsertionsort(list1):
+    # Assigning the passed list1 to 'content'
+    content = list1
+
+    # i from index 1 to len(content)-1
+    for i in range(1, len(content)):
+        # j from index 0 to len(content)-2
+        for j in range(0, len(content) - 1):
+
+            # Checking if an ellement is lesser than an element before that. If so, swap both of them
+            if (content[j] > content[i]):
+                temp = content[j]
+                content[j] = content[i]
+                content[i] = temp
+
+    # returning the list after sorting
+    return content
+
 
 def findnum(num):
 
@@ -301,15 +333,15 @@ def findnum(num):
 
         print("The number is : ",middle)
         # Asking the user whether middle is the number or not
-        a=int(input("Give 1 if this is the number ?"))
+        a=int(input("Give 1 if this is the number , or else press any key :"))
 
-        #If That is the number, print thatb number
+        #If That is the number, print that number
         if(a == 1):
             print("The number is : ",middle)
             break
         else:
             #If not, then confirm whether the number is greater than or less than this
-            b=int(input("Give 1 If the number is greater than this ?"))
+            b=int(input("Give 1 If the number is greater than this or else press any key :"))
             """If it is greater, in the next iteration, only the second half will be considered
             If it is lesser ,only the first half will be considered"""
             if(b == 1):
@@ -353,6 +385,10 @@ def binarysearch(num, list2, e):
         # If the mid element is greater than the element, then continue with the first half of the list
         elif (elem < list1[mid]):
             last = mid - 1
+
+
+
+
 
 
 
