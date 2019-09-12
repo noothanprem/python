@@ -18,12 +18,12 @@ while True:
         # If it is greater than 30, prompt the user to enter a number less than 31
         if (n > 30):
             print("Enter a number below 31")
+            continue
         # if the number is below 31, call the function in the BL file
         elif(n < 0):
             print("Please enter a Positive number")
-        else:
-            utility.pow1(n)
-            break
+            continue
+        break
     except ValueError:
         print("Please enter a number")
-
+utility.pow1(n)

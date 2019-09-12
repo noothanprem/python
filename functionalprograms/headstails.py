@@ -16,8 +16,9 @@ while True:
         #Checking whether the number is positive or not
         if n < 1:
             print("Invalid Input..Enter a Positive Number : ")
-        else:
-            utility.headstails(n)
-            break
+            continue
+        break
     except ValueError:
         print("Please enter a number only")
+        continue
+utility.headstails(n)

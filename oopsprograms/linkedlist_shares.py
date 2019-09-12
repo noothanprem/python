@@ -23,12 +23,21 @@ for i in json_string:
     #Adding each element of the string to the LinkedList by calling add() method
     list1.add(i)
 
-c=1
-while(c == 1):
+while True:
     print("1.Display")
     print("2.Add Share")
     print("3.Remove Share")
-    op=int(input("Enter 1,2, or 3 : "))
+    while True:
+        try:
+            op=int(input("Enter 1,2, or 3 : "))
+            if(op < 1 or op > 3):
+                print("Enter either 1,2, or 3")
+                continue
+            break
+        except ValueError:
+            print("Enter either 1,2, or 3")
+            continue
+
     #Calls the display() method of LinkedList if the user choosed 1
     if(op == 1):
         list1.display()
@@ -36,12 +45,20 @@ while(c == 1):
     elif(op == 2):
         #calling add() method of the file and stores the string
         json_string=j1.add(json_string)
+        print(json_string)
         list1.add(json_string)
         #calls the update() to update the new json_string into the file
         j1.file_update(json_string)
     elif(op == 3):
         # calling remove() method of the LinkedList if the user has choosed 3
         list1.remove()
-    c=int(input("Enter 1 to continue and 2 to exit : "))
+    while True:
+        c=int(input("Enter 1 to continue and 2 to exit : "))
+        if(c != 1 and c != 2):
+            print("Enter either 1 or 2")
+            continue
+        break
+    if(c == 2):
+        break
         
 

@@ -42,7 +42,11 @@ list2=utility.bubsort(content)
 
 print("After Sorting : ",list2)
 
-#Writing the sorted content into the file
-with open('xyz.txt', 'w') as f3:
-    for contents in list2:
-        f3.write('%s\n' % contents)
+try:
+    #Writing the sorted content into the file
+    with open('xyz.txt', 'w') as f3:
+        for contents in list2:
+            f3.write('%s\n' % contents)
+except FileNotFoundError as e:
+    print(e)
+    sys.exit()

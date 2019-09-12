@@ -48,6 +48,19 @@ print("After Sorting : ",content)
 while True:
     #getting the wrd to be searched from the user
     s1=input("Enter the word to be searched : ")
+    if(s1.isspace()):
+        print("White spaces are not allowed.. please try once more")
+        continue
+    bool=False
+    specialChars = ["$", "#", "@", "!", "*","+","-",",","%","^","(",")","[","]","{","}",":",";","'","<",">","?","~"]
+    for i in s1:
+        for j in specialChars:
+            if(i == j):
+                print("No Special characters allowed.. Please try once more")
+                bool=True
+                break
+    if(bool == True):
+        continue
     if(s1.isdigit() == True):
         print("Enter words only.. not digits")
     else:

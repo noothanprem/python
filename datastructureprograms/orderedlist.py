@@ -15,10 +15,11 @@ from datastructureprograms.orderedlist_utility import LinkedList
 my_list=LinkedList()
 
 #opening the file with only 'read' permission
-f2=open("abc.txt","r")
-with open('abc.txt') as f:
-    content = f.read().split(',')
-f2.close()
+try:
+    with open('abc.txt') as f:
+        content = f.read().split(',')
+except FileNotFoundError as e:
+    print(e)
 #printing the contents of the file
 print(content)
 
@@ -32,20 +33,30 @@ while i < len(content):
 #Displaying the Linkedlist contents
 my_list.display()
 
-#Asks for the number to search from the user
-s1 = int(input("Enter the number which you want to search : "))
+while True:
+    try:
+        #Asks for the number to search from the user
+        s1 = int(input("Enter the number which you want to search : "))
+        break
+    except ValueError:
+        print("Only numbers are allowed")
+        continue
+
 #calling the search() method of LinkedList
 my_list.search(s1)
 
-#Opening the other file foe writing updated data
-with open("xyz.txt","w+") as f3:
-    #Iterates till we reach the last element of the linked list
-    while my_list.size() > 0:
-        #calling da() functionj of the LinkedList
-        print(my_list.da())
-        #writing the element to the file
-        f3.write(str(my_list.da()))
-        #Giving a space after the element
-        f3.write(" ")
-        #removes that element from the list by calling the remove() method
-        my_list.remove(0)
+try:
+    #Opening the other file foe writing updated data
+    with open("xyz.txt","w+") as f3:
+        #Iterates till we reach the last element of the linked list
+        while my_list.size() > 0:
+            #calling da() functionj of the LinkedList
+            print(my_list.da())
+            #writing the element to the file
+            f3.write(str(my_list.da()))
+            #Giving a space after the element
+            f3.write(" ")
+            #removes that element from the list by calling the remove() method
+            my_list.remove(0)
+except FileNotFoundError as e:
+    print(e)

@@ -332,16 +332,32 @@ def findnum(num):
         middle=(first+last)//2
 
         print("The number is : ",middle)
-        # Asking the user whether middle is the number or not
-        a=int(input("Give 1 if this is the number , or else press any key :"))
-
+        while True:
+            try:
+                # Asking the user whether middle is the number or not
+                a=int(input("Give 1 if this is the number , or else 2 :"))
+                if(a < 1 or a > 2):
+                    print("Enter either 1 or 2")
+                    continue
+                break
+            except ValueError:
+                print("Enter Positive integers only ")
+                continue
         #If That is the number, print that number
         if(a == 1):
             print("The number is : ",middle)
             break
         else:
-            #If not, then confirm whether the number is greater than or less than this
-            b=int(input("Give 1 If the number is greater than this or else press any key :"))
+            while True:
+                try:
+                    #If not, then confirm whether the number is greater than or less than this
+                    b=int(input("Give 1 If the number is greater than this or else press 2 :"))
+                    if (b < 1 or b > 2):
+                        print("Enter either 1 or 2")
+                        continue
+                    break
+                except ValueError:
+                    print("Enter Positive integers only ")
             """If it is greater, in the next iteration, only the second half will be considered
             If it is lesser ,only the first half will be considered"""
             if(b == 1):
@@ -354,6 +370,7 @@ def findnum(num):
 
 
 def binarysearch(num, list2, e):
+
     # Assigning the passed list2,e, and num to list1,elem and n
     list1 = list2
     elem = e
@@ -378,13 +395,14 @@ def binarysearch(num, list2, e):
         # Checking whether the mid element and the required element are same or not. If same, we have found the element
         if (elem == list1[mid]):
             print("The element found at : ", mid)
-            break
+            return
         # If the mid element is less than the element, then continue with the second half of the list
         elif (elem > list1[mid]):
             first = mid + 1
         # If the mid element is greater than the element, then continue with the first half of the list
         elif (elem < list1[mid]):
             last = mid - 1
+    print("Element not found")
 
 
 

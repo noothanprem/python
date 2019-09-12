@@ -15,9 +15,9 @@ while True:
         s1=str(y)
         if(len(s1) != 4):
             print("Please enter a 4 digit year")
-        else:
-            #calling the function in the BL file
-            utility.leap(y)
-            break
+            continue
+        break
     except ValueError:
         print("Please Enter a number only")
+#calling the function in the BL file
+utility.leap(y)

@@ -1,6 +1,6 @@
 import json
 import datetime
-
+import sys
 
 class Node:
 
@@ -50,8 +50,27 @@ class LinkedList:
 
     #Function to remove a node
     def remove(self):
-        #gets the name of the element which the user wants to remove
-        elem = input("Enter the element which you want to remove : ")
+        while True:
+            #gets the name of the element which the user wants to remove
+            elem = input("Enter the element which you want to remove : ")
+            if(elem.isdigit()):
+                print("Numbers are not allowed")
+                continue
+            if(elem.isspace()):
+                print("Whitespaces are not allowed")
+                continue
+            specialChars = ["$", "#", "@", "!", "*", "+", "-", ",", "%", "^", "(", ")", "[", "]", "{", "}", ":", ";",
+                            "'", "<",
+                            ">", "?", "~"]
+            for i in elem:
+                for j in specialChars:
+                    if (i == j):
+                        print("No Special characters allowed.. Please try once more")
+                        sys.exit()
+
+            break
+
+
         #If the head node is 'None', then the Linked List will be empty
         if (self.head is None):
             print("The list is empty")
@@ -79,9 +98,13 @@ class LinkedList:
             list2.append(cur.data)
             cur = cur.next
         print(list2)
-        #dumps the data in the list to the json file
-        with open("stocks1.json", "w") as f:
-            json.dump(list2, f)
+        try:
+            #dumps the data in the list to the json file
+            with open("stocks1.json", "w") as f:
+                json.dump(list2, f)
+        except FileNotFoundError as e:
+            print(e)
+            sys.exit()
 
 
 
@@ -89,17 +112,26 @@ class Jsoninteract:
 
     #Function to open the json file
     def file_open(self):
-        #Opens the file with 'read' permission
-        with open("stocks1.json", "r") as f:
-            content = f.read()
-            json_string = json.loads(content)
+        try:
+            #Opens the file with 'read' permission
+            with open("stocks1.json", "r") as f:
+                content = f.read()
+                json_string = json.loads(content)
+        except FileNotFoundError as e:
+            print(e)
+            sys.exit()
+
         return json_string
 
     #Function to update the json file
     def file_update(self, json_string):
-        # Opens the file with 'write' permission
-        with open("stocks1.json", "w") as f:
-            json.dump(json_string, f)
+        try:
+            # Opens the file with 'write' permission
+            with open("stocks1.json", "w") as f:
+                json.dump(json_string, f)
+        except FileNotFoundError as e:
+            print(e)
+            sys.exit()
 
     #Function To add a new company
     def add(self, json_string):

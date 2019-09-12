@@ -1,3 +1,9 @@
+class Node:
+    def __init__(self,data):
+        #Initializing data and next
+        self.data=data
+        self.next=None
+
 class Stack:
     def __init__(self):
         #Initializes 'top' with '-1'
@@ -9,6 +15,7 @@ class Stack:
 
     #Function to push to the stack
     def push(self,json_string):
+        new_node=Node(json_string)
         #Checks whether the stack is full or not
         if(self.top == self.max):
             print("Stack is full")
@@ -16,7 +23,8 @@ class Stack:
         #Incrementing 'top' by `1'
         self.top=self.top+1
         #Assigning json_string as the 'top' element
-        self.list1[self.top]=json_string
+        #self.list1[self.top]=json_string
+        self.list1[self.top]=new_node
 
     #Function to pop from the stack
     def pop(self):
@@ -25,7 +33,8 @@ class Stack:
             print("Stack is empty")
             return
         #stores the 'top' element into a temp variable
-        elem=self.list1[self.top]
+        #elem=self.list1[self.top]
+        elem=self.list1[self.top].data
         #Decrements 'top' by '1'
         self.top=self.top-1
         return elem

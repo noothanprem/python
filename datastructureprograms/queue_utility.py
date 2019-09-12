@@ -5,7 +5,17 @@ class Queue:
         self.front = 0
         self.num = num
         #Takes the total balance through input
-        total = int(input("Enter the total balance left in bank : "))
+        total=0
+        while True:
+            try:
+                total = int(input("Enter the total balance left in bank : "))
+                if(total < 1):
+                    print("Amount should be a positive integer")
+                    continue
+                break
+            except ValueError:
+                print("Amount should be an integers")
+                continue
         #Total amount is divided and assigned equally for each person
         perperson = int(total / num)
         """creates a list with the number of elements same as the number of people,

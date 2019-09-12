@@ -138,6 +138,7 @@ class LinkedList:
             """Compares the data with each node's data,whether they are equal or not
             if they are equal, call the delete() method"""
             if item == cur_node.data:
+                print("Element found at index : ",index)
                 self.delete(item, index)
                 return
             #Increment the index and move to the next node

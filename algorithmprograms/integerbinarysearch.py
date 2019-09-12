@@ -9,6 +9,7 @@ Purpose : BinarySearch  for integers
 from Utility import utility
 import sys
 
+n=0
 while True:
     try:
         #getting the number of elements that the user is going to give
@@ -32,6 +33,7 @@ for i in range(0,n):
         print("Please enter integers only")
         sys.exit()
     list1.append(int(d))
+
 
 
 while True:

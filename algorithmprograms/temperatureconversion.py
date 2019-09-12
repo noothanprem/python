@@ -10,8 +10,13 @@ Purpose : given the temperature in fahrenheit as input outputs the temperature i
 
 from Utility import utility
 
-#asking the user whether to convert from celsius to Farenheit or from Farenheit to Celsius
-n=int(input("Enter 1 for Celsius to Farenheit or 2 for Fareheit to Celsius "))
+while True:
+    try:
+        #asking the user whether to convert from celsius to Farenheit or from Farenheit to Celsius
+        n=int(input("Enter 1 for Celsius to Farenheit or 2 for Fareheit to Celsius "))
+        break
+    except ValueError:
+        print("Enter integers only")
 
 #Calling the function in the BL file
 utility.tempconvert(n)

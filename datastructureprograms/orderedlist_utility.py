@@ -32,7 +32,7 @@ class LinkedList:
             return
         #loop iterates till cur.next becomes null
         while cur.next is not None:
-            """Checking if the data in the 'head' is greater than the given data.
+            """Checking if the data in any node's next node is greater than the given data.
             If it is greater, place the new node before that node"""
             if (data < cur.next.data):
                 new_node.next = cur.next
@@ -62,11 +62,15 @@ class LinkedList:
 
     #Function to display the elements of LinkedList
     def display(self):
+        #creating a list for storing the elements in the linked list
         elems = []
+        #if the head node is 'None', then the Linked list is empty
         if self.head is None:
             return elems
+        #Starts with the head node and iterates through all the nodes in the list
         cur_node = self.head
         while cur_node is not None:
+            #Appending each node's elements to the list
             elems.append(cur_node.data)
             cur_node = cur_node.next
         print(elems)
@@ -98,7 +102,7 @@ class LinkedList:
         #Checks whether the Linked List is empty or not
         if self.head is None:
             return
-        #Starts with '0' as the 'index' and 'node' as 'head'
+        #Starts with '0' as the 'index' and 'cur_node' as 'head'
         cur_index = 0
         cur_node = self.head
         #Returns the 'head' element if the 'index' is '0'

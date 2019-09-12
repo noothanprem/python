@@ -7,9 +7,23 @@
 """
 
 from datastructureprograms.dequeue_utility import Dequeue
+import sys
 
-# Take the string as input
-str1 = input("Enter the string : ")
+str1=''
+while True:
+    # Take the string as input
+    str1 = input("Enter the string : ")
+    if(str1.isdigit()):
+        print("Numbers are not allowed")
+        continue
+    specialChars = ["$", "#", "@", "!", "*", "+", "-", ",", "%", "^", "(", ")", "[", "]", "{", "}", ":", ";", "'", "<",
+                    ">", "?", "~"]
+    for i in str1:
+        for j in specialChars:
+            if (i == j):
+                print("No Special characters allowed.. Please try once more")
+                sys.exit()
+    break
 # Setting the counter 'size' as '0'
 size = 0
 
