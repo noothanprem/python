@@ -26,4 +26,5 @@ while True:
         break
     except ValueError:
         print("Please enter a number")
-utility.pow1(n)
+list1=utility.pow1(n)
+print(list1)

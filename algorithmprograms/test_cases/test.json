@@ -1,0 +1,233 @@
+{
+  "anagram" :   [
+                  {
+                    "description": "string_input",
+                    "input1": "mad",
+                    "input2": "adm",
+                    "output": true
+                  },
+                  {
+                    "description": "space_input",
+                    "input1": " ",
+                    "input2": " ",
+                    "output": true
+                  },
+                  {
+                    "description": "specialchars_input",
+                    "input1": "%",
+                    "input2": "#",
+                    "output": false
+                  },
+                  {
+                    "description": "integer_input",
+                    "input1": 3,
+                    "input2": 6,
+                    "output": false
+                  }
+  ],
+  "dayofweek" :   [
+                    {
+                    "description": "string_input",
+                    "input1": "jan",
+                    "input2": "fifteen",
+                    "input3": "twothousand",
+                    "output": false
+                  },
+                  {
+                    "description": "space_input",
+                    "input1": " ",
+                    "input2": " ",
+                    "input3": " ",
+                    "output": false
+                  },
+                  {
+                    "description": "specialchars_input",
+                    "input1": "%",
+                    "input2": "#",
+                    "input3": "!",
+                    "output": false
+                  },
+                  {
+                    "description": "integer_input",
+                    "input1": 1,
+                    "input2": 15,
+                    "input3": 2019,
+                    "output": 2
+                  }
+  ],
+  "filebinarysearch": [
+                  {
+                    "description": "string_input",
+                    "input1": "zsa",
+                    "input2": "dbgd",
+                    "output": false
+                  },
+                  {
+                    "description": "space_input",
+                    "input1": " ",
+                    "input2": " ",
+                    "output": false
+                  },
+                  {
+                    "description": "specialchars_input",
+                    "input1": "%",
+                    "input2": "#",
+                    "output": false
+                  },
+                  {
+                    "description": "integer_input",
+                    "input1": 1,
+                    "input2": 15,
+                    "output": false
+                  },
+                  {
+                    "description": "listinput",
+                    "input1": ["abhi","janis","jettus","noothan","sreeraj","thanzeeh"],
+                    "input2": "jettus",
+                    "output": 2
+                  }
+  ],
+  "filebubblesort": [
+                      {
+                        "description": "string_input",
+                        "input": "zsa",
+                        "output": false
+                      },
+                      {
+                        "description": "space_input",
+                        "input": " ",
+                        "output": false
+                      },
+                      {
+                        "description": "specialchars_input",
+                        "input": "%",
+                        "output": false
+                      },
+                      {
+                        "description": "integer_input",
+                        "input": 4,
+                        "output": false
+                      },
+                      {
+                        "description": "list_input",
+                        "input": ["jettus","thanzeeh","janis","sreeraj","abhi","noothan"],
+                        "output": ["abhi","janis","jettus","noothan","sreeraj","thanzeeh"]
+                      }
+  ],
+  "fileinsertionsort": [
+                        {
+                          "description": "string_input",
+                          "input": "zsa",
+                          "output": false
+                        },
+                        {
+                        "description": "space_input",
+                        "input": " ",
+                        "output": false
+                      },
+                      {
+                        "description": "specialchars_input",
+                        "input": "%",
+                        "output": false
+                      },
+                      {
+                        "description": "integer_input",
+                        "input": 4,
+                        "output": false
+                      },
+                      {
+                        "description": "list_input",
+                        "input": ["jettus","thanzeeh","janis","sreeraj","abhi","noothan"],
+                        "output": ["abhi","janis","jettus","noothan","sreeraj","thanzeeh"]
+                      }
+  ],
+  "integerbinarysearch":  [
+                            {
+                              "description": "string_input",
+                              "input1": "zsa",
+                              "input2": "sdfg",
+                              "input3": "tym",
+                              "output": false
+                            },
+                            {
+                              "description": "space_input",
+                              "input1": " ",
+                              "input2": " ",
+                              "input3": " ",
+                              "output": false
+                            },
+                            {
+                              "description": "specialchars_input",
+                              "input1": "$",
+                              "input2": "#",
+                              "input3": "@",
+                              "output": false
+                            },
+                            {
+                              "description": "integer_input",
+                              "input1": 56,
+                              "input2": 23,
+                              "input3": 78,
+                              "output": false
+                            },
+                            {
+                              "description": "correct_input",
+                              "input1": 5,
+                              "input2": [23,67,12,90,54],
+                              "input3": 67,
+                              "output": 3
+                            }
+  ],
+  "monthlypayment"   :  [
+                          {
+                              "description": "string_input",
+                              "input1": "zsa",
+                              "input2": "sdfg",
+                              "input3": "tym",
+                              "output": false
+                            },
+                            {
+                              "description": "space_input",
+                              "input1": " ",
+                              "input2": " ",
+                              "input3": " ",
+                              "output": false
+                            },
+                            {
+                              "description": "specialchars_input",
+                              "input1": "$",
+                              "input2": "#",
+                              "input3": "@",
+                              "output": false
+                            },
+                            {
+                              "description": "integer_input",
+                              "input1": 10000,
+                              "input2": 5,
+                              "input3": 9,
+                              "output": 208
+                            }
+  ],
+  "squareroot"  : [
+                    {
+                      "description": "string_input",
+                      "input": "zsa",
+                      "output": false
+                    },
+                    {
+                      "description": "space_input",
+                      "input": " ",
+                      "output": false
+                    },
+                    {
+                      "description": "specialchars_input",
+                      "input": "%",
+                      "output": false
+                    },
+                    {
+                      "description": "integer_input",
+                      "input": 25,
+                      "output": 5
+                    }
+  ]
+}

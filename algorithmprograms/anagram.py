@@ -24,4 +24,4 @@ while True:
         print("Enter words only")
 
 #Calling the function in the BL file
-utility.checkanagram(s1,s2)
+bool1=utility.checkanagram(s1,s2)

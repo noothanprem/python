@@ -46,4 +46,4 @@ while True:
         print("Please enter numbers only")
 
 #calling the function in the BL file
-utility.binarysearch(n,list1,elem)
+item=utility.binarysearch(n,list1,elem)

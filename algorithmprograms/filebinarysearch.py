@@ -68,4 +68,4 @@ while True:
 
 
 #calling the function in the BL file
-utility.binary(content,s1)
+pos=utility.binary(content,s1)

@@ -20,4 +20,4 @@ while True:
     except ValueError:
         print("Please Enter a number only")
 #calling the function in the BL file
-utility.leap(y)
+bool1=utility.leap(y)

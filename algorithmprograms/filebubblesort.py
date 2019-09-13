@@ -27,7 +27,7 @@ f1.close()
 
 #Reading the contents from the file
 try:
-    with open('xy.txt') as f:
+    with open('xyz.txt') as f:
         content = f.read().split(' ')
 except FileNotFoundError as e:
     print(e)

@@ -1,12 +1,121 @@
 {
   "distance": [
                 {
-                  "string_input":
-                  {
-                    "str1": "abc",
-                    "str2": "xyz"
-                  }
+                  "description": "string_input",
+                  "input1": "abc",
+                  "input2": "xyz",
+                  "output": false
+                },
+                {
+                  "description": "space_input",
+                  "input1": " ",
+                  "input2": " ",
+                  "output": false
+                },
+                {
+                  "description": "specialchars_input",
+                  "input1": "%",
+                  "input2": "@",
+                  "output": false
+                },
+                {
+                  "description": "integer_input",
+                  "input1": 20,
+                  "input2": 15,
+                  "output": 25.0
                 }
+  ],
+  "harmonic" : [
+                {
+                  "description": "string_input",
+                  "input": "abc",
+                  "output": false
+                },
+                {
+                  "description": "space_input",
+                  "input": " ",
+                  "output": false
+                },
+                {
+                  "description": "specialchars_input",
+                  "input": "%",
+                  "output": false
+                },
+                {
+                  "description": "integer_input",
+                  "input": 5,
+                  "output": 2.28
+                }
+  ],
+  "leapyear"  :[
+                {
+                  "description": "string_input",
+                  "input": "abc",
+                  "output": false
+                },
+                {
+                  "description": "space_input",
+                  "input": " ",
+                  "output": false
+                },
+                {
+                  "description": "specialchars_input",
+                  "input": "%",
+                  "output": false
+                },
+                {
+                  "description": "integer_input",
+                  "input": 2016,
+                  "output": true
+                }
+  ],
+  "power" : [
+                {
+                  "description": "string_input",
+                  "input": "abc",
+                  "output": false
+                },
+                {
+                  "description": "space_input",
+                  "input": " ",
+                  "output": false
+                },
+                {
+                  "description": "specialchars_input",
+                  "input": "%",
+                  "output": false
+                },
+                {
+                  "description": "integer_input",
+                  "input": 3,
+                  "output": [1,2,4,8]
+                }
+  ],
+  "strreplace" :[
 
-              ]
+                 {
+                  "description": "string_input",
+                  "input1": "hello user how are you",
+                   "input2": "shyam",
+                  "output": "hello shyam how are you"
+                 },
+                {
+                  "description": "space_input",
+                  "input1": " ",
+                  "input2": " ",
+                  "output": false
+                },
+                {
+                  "description": "specialchars_input",
+                  "input1": "%",
+                  "input2": "#",
+                  "output": false
+                },
+                {
+                  "description": "integer_input",
+                  "input1": 3,
+                  "input2": 6,
+                  "output": false
+                }
+  ]
 }

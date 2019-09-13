@@ -50,8 +50,8 @@ def gambler(stake, goal):
     loseper = (lose / count) * 100
 
     # Printing the Percentages
-    print("Win Percentage : ", winper)
-    print("Lose Percentage : ", loseper)
+    print("Win Percentage : ", round(winper,2))
+    print("Lose Percentage : ", round(loseper,2))
 
 
 
@@ -100,10 +100,12 @@ def leap(y):
     count=0
 
     # checking whether it is a leap year
-    if(year % 4 == 0 and year % 100 != 0 and year % 400 != 0):
+    if((year % 4 == 0) and (year % 100 != 0) and (year % 400 != 0)):
         print(year," is a Leap Year")
+        return True
     else:
         print(year, " is not a Leap Year")
+        return False
 
 
 
@@ -115,11 +117,14 @@ def pow1(n):
     #Initializing the 'power' and 'i' valriables with 0
     power1=0
     i=0
+    list1=[]
     while(power1 < 2**num):
         #Performng the operation and printing the results till i reaches 'num'
         power1=2**i
         print("2**",i," = ",power1)
+        list1.append(power1)
         i+=1
+    return list1
 
 
 
@@ -211,7 +216,7 @@ def checkanagram(str1,str2):
                     #checking whether we have reached the last character of s1 or not
                     if(i == (len1-1)):
                         print("These are Anagrams")
-                        return
+                        return True
                     else:
                         #if it's not the last charcter, break the inner loop to continue with the next element of s1
                         break
@@ -221,8 +226,9 @@ def checkanagram(str1,str2):
                         #If we have reached, that means that character is not present in s2
                         #So, print the message saying that these are not Anagrams and return
                         print("These are not anagrams")
-                        return
+                        return False
     print("These are not Anagrams")
+    return False
 
 
 
@@ -264,7 +270,7 @@ def binary(list1, s):
         # If they are same, we have foud the element
         if (s1 == content[middle]):
             print("Word found at ", middle)
-            return
+            return middle
         # if s1 is greater than the middle element, then update the 'first' with 'middle+1' to see in the second half
         elif (s1 > content[middle]):
             first = middle + 1
@@ -272,6 +278,7 @@ def binary(list1, s):
         elif (s1 < content[middle]):
             last = middle - 1
     print("The word not found")
+    return False
 
 
 
@@ -376,6 +383,10 @@ def binarysearch(num, list2, e):
     elem = e
     n = num
 
+    #For Testing
+    if(type(list1) != list):
+        return False
+
     # Sorting the elements before doing the binary search
     list1.sort()
     print("Elements after sorting : ", list1)
@@ -395,7 +406,7 @@ def binarysearch(num, list2, e):
         # Checking whether the mid element and the required element are same or not. If same, we have found the element
         if (elem == list1[mid]):
             print("The element found at : ", mid)
-            return
+            return mid
         # If the mid element is less than the element, then continue with the second half of the list
         elif (elem > list1[mid]):
             first = mid + 1
