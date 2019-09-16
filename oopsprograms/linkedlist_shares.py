@@ -8,12 +8,12 @@
 """
 
 
-from oopsprograms import linkedlistsharesutility
+from oopsprograms import linkedlistsharesmain
 
 #Creating the object for the Linked List class
-list1=linkedlistsharesutility.LinkedList()
+list1=linkedlistsharesmain.LinkedList()
 #Creating the object for the Jsoninteract class
-j1=linkedlistsharesutility.Jsoninteract()
+j1=linkedlistsharesmain.Jsoninteract()
 #calling the function to open the json file and reading the data in the file
 json_string=j1.file_open()
 

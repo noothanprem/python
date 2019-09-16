@@ -165,7 +165,6 @@ class Stockreports:
         try:
             # Opens the file with read permission
             with open("stock.json", "r") as f:
-                # json.dump(json_string,f)
                 content = f.read()
 
             json_string = json.loads(content)

@@ -1,4 +1,4 @@
-from oopsprograms.regularexpression_utility import Regex
+from oopsprograms.regularexpressionmain import Regex
 import sys
 
 #Creating the object of the Regex class
@@ -24,6 +24,9 @@ while True:
                 print("No Special characters allowed.. Please try once more")
                 sys.exit()
     break
+
+
+
 #calling the function to replace the name
 str2=r1.namereplace(str1,name)
 print(str2)

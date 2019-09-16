@@ -7,7 +7,7 @@
 
 """
 
-from oopsprograms.stockstack_utility import Stack
+from oopsprograms.stockstackmain import Stack
 import json
 import datetime
 import sys
@@ -224,7 +224,7 @@ if __name__ == "__main__":
             #calling file_update function to update data in the file
             file_update(json_string)
         elif(n == 3):
-            # call buystock() if the user has selected '3'
+            # call sellstock() if the user has selected '3'
             json_string=sellstock(json_string)
             #calls file_update() to update the data in the file
             file_update(json_string)

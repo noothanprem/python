@@ -22,4 +22,4 @@ while True:
         continue
 
 #Calling the function in the BL file
-binarysearchtree_utility.find(n)
+val=binarysearchtree_utility.find(n)

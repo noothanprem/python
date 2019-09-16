@@ -5,7 +5,7 @@
     Purpose : Commercial data processing
 """
 
-from oopsprograms.deckofcards_utility import Deck
+from oopsprograms.deckofcardsmain import Deck
 
 #Calling find() method of 'Deck' class in utility class
 Deck.find()

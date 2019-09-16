@@ -1,4 +1,4 @@
-from oopsprograms.stockreports_utility import Stockreports
+from oopsprograms.stockreportsmain import Stockreports
 
 #calling the file_open() function to open the json file and stores the data
 json_string =Stockreports.file_open()

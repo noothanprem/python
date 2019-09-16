@@ -1,0 +1,46 @@
+{
+  "balancedparenthesis" :   [
+                              {
+                                "description": "string_input",
+                                "input": "((5+6)(7+9))",
+                                "output": true
+                              },
+                              {
+                                "description": "integer_input",
+                                "input": 235,
+                                "output": false
+                              },
+                              {
+                                "description": "whitespace_input",
+                                "input": " ",
+                                "output": false
+                              },
+                              {
+                                "description": "specialcharacter_input",
+                                "input": "*",
+                                "output": false
+                              }
+  ],
+  "binarysearchtree" :      [
+                              {
+                                "description": "string_input",
+                                "input": "dsf",
+                                "output": false
+                              },
+                              {
+                                "description": "integer_input",
+                                "input": 5,
+                                "output": 42
+                              },
+                              {
+                                "description": "whitespace_input",
+                                "input": " ",
+                                "output": false
+                              },
+                              {
+                                "description": "specialcharacter_input",
+                                "input": "*",
+                                "output": false
+                              }
+  ]
+}

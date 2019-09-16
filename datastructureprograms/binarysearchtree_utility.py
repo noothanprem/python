@@ -17,6 +17,10 @@ def fact(num):
 
 #Function to find the number of nodes
 def find(n):
-    #Applying the equation to find the number of nodes, fact() function is called here
-    val=fact(2*n)//((fact(n+1)*fact(n)))%100000007
-    print(val)
+    if(str(n).isdigit()):
+        #Applying the equation to find the number of nodes, fact() function is called here
+        val=fact(2*n)//((fact(n+1)*fact(n)))%100000007
+        print(val)
+        return val
+    else:
+        return False

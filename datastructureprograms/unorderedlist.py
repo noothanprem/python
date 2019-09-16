@@ -24,15 +24,18 @@ except FileNotFoundError as e:
     print(e)
     sys.exit()
 
-
 #prints the contents of the       file
 print(content)
+
 
 i=0
 #Adding each element to the Linked List by calling 'add()' method
 while i < len(content):
     my_list.add(content[i])
     i+=1
+
+
+
 
 #Displaying the contents of the Linked List
 my_list.display()

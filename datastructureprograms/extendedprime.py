@@ -37,4 +37,6 @@ for i in range(len(primelist)):
     if primelist[i] not in anagramlist:
         notanaglist.append(primelist[i]) 
 print("Not Anagram List : ",notanaglist)
-            
+
+outerlist=[]
+

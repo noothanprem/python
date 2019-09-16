@@ -8,7 +8,7 @@
 """
 
 
-from oopsprograms.extendedinventorymanagement_utility import Exinvent
+from oopsprograms.extendedinventorymanagementmain import Exinvent
 
 #creates the object of the class
 ex=Exinvent()

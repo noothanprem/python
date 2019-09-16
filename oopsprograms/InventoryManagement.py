@@ -8,9 +8,10 @@
 """
 
 
-from oopsprograms.inventorymanagement_utility import Inventory
+from oopsprograms.inventorymanagementmain import Inventory
 
 
-
+i1=Inventory()
 #calling the function to find the value and display it
-Inventory.find()
+data=i1.file_open()
+i1.find(data)

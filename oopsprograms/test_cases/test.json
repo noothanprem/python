@@ -1,0 +1,81 @@
+{
+  "regularexpressionname" :       [
+                                {
+                                  "description": "string_input",
+                                  "input1": "hello <<name>>",
+                                  "input2": "shyam",
+                                  "output": "hello shyam"
+                                },
+                                {
+                                  "description": "integer_input",
+                                  "input1": 123,
+                                  "input2": 456,
+                                  "output": false
+                                },
+                                {
+                                  "description": "space_input",
+                                  "input1": " ",
+                                  "input2": " ",
+                                  "output": false
+                                },
+                                {
+                                  "description": "special_input",
+                                  "input1": "&",
+                                  "input2": "*",
+                                  "output": false
+                                }
+  ],
+  "regularexpressionfullname" :     [
+                                  {
+                                    "description": "string_input",
+                                    "input1": "hello <<full name>>",
+                                    "input2": "shyam jith",
+                                    "output": "hello shyam jith"
+                                  },
+                                  {
+                                  "description": "integer_input",
+                                  "input1": 123,
+                                  "input2": 456,
+                                  "output": false
+                                },
+                                {
+                                  "description": "space_input",
+                                  "input1": " ",
+                                  "input2": " ",
+                                  "output": false
+                                },
+                                {
+                                  "description": "special_input",
+                                  "input1": "&",
+                                  "input2": "*",
+                                  "output": false
+                                }
+  ],
+  "regularexpressionnumber" :   [
+                                  {
+                                    "description": "string_input",
+                                    "input1": "91-xxxxxxxxxx",
+                                    "input2": "9567446167",
+                                    "output": "91-9567446167"
+                                  },
+                                  {
+                                  "description": "integer_input",
+                                  "input1": 123,
+                                  "input2": 456,
+                                  "output": false
+                                },
+                                {
+                                  "description": "space_input",
+                                  "input1": " ",
+                                  "input2": " ",
+                                  "output": false
+                                },
+                                {
+                                  "description": "special_input",
+                                  "input1": "&",
+                                  "input2": "*",
+                                  "output": false
+                                }
+  ]
+
+}

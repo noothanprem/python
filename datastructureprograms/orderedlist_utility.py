@@ -6,7 +6,6 @@ class node:
         self.next = None
 
 
-
 class LinkedList:
     def __init__(self):
         #Initializing 'head' as 'None'
